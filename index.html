@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Star_Wars_Logo..png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Star Wars Wiki
+        </a>
+        <button class="btn-danger" onclick="app.controllers.swapiCtrl.prev()" id="prev-btn" type="button">Previous</button>
+        <button class="btn-info" onclick="app.controllers.swapiCtrl.get('people')" type="button">People</button>
+        <button class="btn-info" onclick="app.controllers.swapiCtrl.get('starships')" type="button">Starships</button>
+        <button class="btn-info" onclick="app.controllers.swapiCtrl.get('planets')" type="button">Planets</button>
+        <button class="btn-info" onclick="app.controllers.swapiCtrl.get('species')" type="button">Species</button>
+        <button class="btn-primary" onclick="app.controllers.swapiCtrl.next()" id="next-btn" type="button">Next</button>
+    </nav>
+    <div class="container-fluid">
+        <div class="row bg-body" id="app">
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="swapi-service.js"></script>
+    <script src="swapi-controller.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
